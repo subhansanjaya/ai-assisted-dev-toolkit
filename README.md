@@ -10,7 +10,7 @@ This project is a **basic Model Context Protocol (MCP) server** built with TypeS
 
 It was created as an experiment to improve AI-assisted development for IFS Marble.
 
-![screenshot](https://github.com/subhansanjaya/ai-assisted-dev-toolkit/blob/main/capture.png)
+![screenshot](https://github.com/subhansanjaya/ai-assisted-dev-toolkit/blob/main/assets/capture.png)
 
 ---
 
