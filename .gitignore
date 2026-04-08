@@ -1,0 +1,36 @@
+# Node modules
+node_modules/
+
+# TypeScript build output
+dist/
+build/
+
+# MCP / Inspector / Temp files
+*.log
+*.tmp
+*.cache
+.mcp-inspector/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Mac / Linux / Windows system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+.history/
+
+# npm / npx temporary files
+.npm/
+.npx/
+
+# Jest coverage
+coverage/
+
+# Templates output (if generated)
+templates/*.js
+templates/*.ts

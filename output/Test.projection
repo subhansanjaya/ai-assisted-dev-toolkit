@@ -1,0 +1,6 @@
+projection Test;
+component FNDBAS;
+layer Core;
+
+@DynamicComponentDependency 2
+entityset sdf for 2;

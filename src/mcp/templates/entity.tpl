@@ -1,0 +1,3 @@
+entity {{entityName}} {
+{{fields}}
+}
