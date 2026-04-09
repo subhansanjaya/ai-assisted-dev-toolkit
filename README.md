@@ -8,7 +8,7 @@ This project is a **basic Model Context Protocol (MCP) server** built with TypeS
 - Pages  
 - Entities (extensible)
 
-It was created as an experiment to improve AI-assisted development for IFS Marble.
+It was created as an experiment to improve AI-assisted development for IFS Marble, including AI guidance, validation, and normalization.
 
 ![screenshot](https://github.com/subhansanjaya/ai-assisted-dev-toolkit/blob/main/assets/capture.png)
 
@@ -29,12 +29,13 @@ When using AI tools (Cursor, Copilot):
 
 ## Solution
 
-an MCP server that can connect to a custom source of programming patterns
+An MCP server that can connect to a custom source of programming patterns and generate validated IFS Marble artifacts:
 
-- Generates Marble code using tools  
-- Provides consistent outputs  
-- Can be extended for validation and fixes  
-- Acts as a simple domain-specific backend  
+- Generates Marble code using tools
+- Provides consistent outputs
+- Supports normalization of input from MCP Inspector
+- Adds auto-fixes for missing fields (like page labels or list names)
+- Integrates AI guidance for Cursor
 
 ---
 
@@ -43,12 +44,19 @@ an MCP server that can connect to a custom source of programming patterns
 ```
 src/
   mcp/
-    servermcp.ts → MCP server (for Cursor / AI tools)
-    server.ts → Express server (for manual testing via HTTP)
+    servermcp.ts      → MCP server (for Cursor / AI tools)
+    server.ts         → Express server (for manual HTTP testing)
     tools/
       createProjection.ts
       createPage.ts
       createEntity.ts
+    services/
+      toolHandler.ts
+      templateService.ts
+  schemas/
+    entity.schema.ts
+    page.schema.ts
+    projection.schema.ts
 
 __tests__/
 templates/ (optional)
@@ -204,9 +212,10 @@ templates/
 
 ## Notes
 
-- This is a basic prototype  
-- Not production-ready  
-- Can be extended further  
+- This is a basic prototype for AI-assisted development
+- Works with MCP Inspector and Cursor
+- Not production-ready yet
+- Can be extended for validation, normalization, and fixes
 
 ---
 

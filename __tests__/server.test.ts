@@ -12,8 +12,8 @@ afterAll(() => cleanOutputDir(outputDir));
 
 describe('MCP server orchestration', () => {
   it('creates projection and page in correct order', async () => {
-    const proj = await createProjection({ projectionName: 'TestProj', entity: 'CustomerOrder', entityset: 'CustomerOrders' });
-    const page = await createPage({ pageName: 'CustOrdOverview', entityset: 'CustomerOrders', label: 'Customer Orders', listName: 'CustOrdList' });
+    const proj = await createProjection({ projectionName: 'TestProj', entity: 'CustomerOrder', entitySet: 'CustomerOrders' });
+    const page = await createPage({ pageName: 'CustOrdOverview', entitySet: 'CustomerOrders', label: 'Customer Orders', listName: 'CustOrdList' });
 
     expect(proj.content).toContain('projection TestProj;');
     expect(page.content).toContain('page CustOrdOverview using CustomerOrders {');

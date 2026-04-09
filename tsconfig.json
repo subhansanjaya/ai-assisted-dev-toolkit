@@ -11,6 +11,9 @@
     "declarationMap": true,
     "rootDir": ".",
     "outDir": "./dist",
+    "allowImportingTsExtensions": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
     "skipLibCheck": true
   },
   "include": ["src", "__tests__"],

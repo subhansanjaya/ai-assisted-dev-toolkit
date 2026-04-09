@@ -1,4 +1,4 @@
-page {{pageName}} using {{entityset}} {
+page {{pageName}} using {{entitySet}} {
     label = "{{label}}";
 
     list {{listName}};

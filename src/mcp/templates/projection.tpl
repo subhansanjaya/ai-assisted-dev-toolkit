@@ -1,5 +1,5 @@
 projection {{projectionName}};
-component FNDBAS;
+component {{componentName}};
 layer Core;
 
 @DynamicComponentDependency {{entity}}

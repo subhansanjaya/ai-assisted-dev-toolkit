@@ -1,5 +1,8 @@
 import { createEntity } from '../src/mcp/tools/createEntity';
 import { cleanOutputDir } from './testUtils';
+import path from 'path';
+
+const outputDir = path.join(process.cwd(), "output");
 
 beforeAll(() => cleanOutputDir('output/entities'));
 afterAll(() => cleanOutputDir('output/entities'));
@@ -14,6 +17,7 @@ describe('Entity generation', () => {
       ],
     });
 
+    expect(result.filePath).toBe(path.join(outputDir, 'CustomerOrder.entity'));
     expect(result.content).toContain('entity CustomerOrder {');
     expect(result.content).toContain('OrderId : number;');
   });
