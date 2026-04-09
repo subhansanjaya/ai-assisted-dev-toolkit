@@ -160,6 +160,13 @@ Restart Cursor and use:
 
 ```
 Create a projection for CustomerOrder
+
+or
+
+Create an entity called Customer with fields:
+- name (string)
+- age (number)
+- email (string)
 ```
 
 ---
