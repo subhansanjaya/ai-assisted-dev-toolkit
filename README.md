@@ -12,6 +12,8 @@ It was created as an experiment to improve AI-assisted development for IFS Marbl
 
 ![screenshot](https://github.com/subhansanjaya/ai-assisted-dev-toolkit/blob/main/assets/capture.png)
 
+![screenshot](https://github.com/subhansanjaya/ai-assisted-dev-toolkit/blob/main/assets/capture-cursor.png)
+
 ---
 
 ## Problem
