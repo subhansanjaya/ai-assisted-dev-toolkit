@@ -65,18 +65,70 @@ templates/ (optional)
 ```
 
 ---
+## Cursor Integration
 
-## Installation
+Checkout to the repository
 
-```bash
-npm install
+Create `.cursor/mcp.json`: 
+
+```json
+{
+  "mcpServers": {
+    "ifs-marble": {
+      "command": "node",
+      "args": [
+        "--loader",
+        "ts-node/esm",
+        "src/mcp/servermcp.ts"
+      ]
+    }
+  }
+}
+Go to Cursor Settings -> Tools and MCPs
+
+Enable the server (IFS Marble)
+```
+
+Restart Cursor and use:
+
+```
+Create a projection for CustomerOrder
+
+or
+
+Create an entity called Customer with fields:
+- name (string)
+- age (number)
+- email (string)
 ```
 
 ---
 
+## MCP Inspector
+
+Run:
+```bash
+npm install
+```
+
+```bash
+npx @modelcontextprotocol/inspector \
+node --loader ts-node/esm src/mcp/servermcp.ts
+```
+
+Open:
+
+```
+http://localhost:6274
+```
+
 ## Running
 
 ### MCP Server
+
+```bash
+npm install
+```
 
 ```bash
 node --loader ts-node/esm src/mcp/servermcp.ts 
@@ -118,20 +170,7 @@ __tests__/
 
 ---
 
-## MCP Inspector
 
-Run:
-
-```bash
-npx @modelcontextprotocol/inspector \
-node --loader ts-node/esm src/mcp/servermcp.ts
-```
-
-Open:
-
-```
-http://localhost:6274
-```
 
 ### Input Format (Important)
 
@@ -147,39 +186,6 @@ Inspector does NOT support JSON directly. Use key-value pairs:
 
 ---
 
-## Cursor Integration
-
-Create `.cursor/mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "ifs-marble": {
-      "command": "node",
-      "args": [
-        "--loader",
-        "ts-node/esm",
-        "src/mcp/servermcp.ts"
-      ]
-    }
-  }
-}
-```
-
-Restart Cursor and use:
-
-```
-Create a projection for CustomerOrder
-
-or
-
-Create an entity called Customer with fields:
-- name (string)
-- age (number)
-- email (string)
-```
-
----
 
 ## Express API Example
 
