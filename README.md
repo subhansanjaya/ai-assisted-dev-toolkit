@@ -84,10 +84,11 @@ Create `.cursor/mcp.json`:
     }
   }
 }
+
+```
 Go to Cursor Settings -> Tools and MCPs
 
 Enable the server (IFS Marble)
-```
 
 Restart Cursor and use:
 
