@@ -228,6 +228,18 @@ templates/
 
 ---
 
+## Future Enhancements
+
+- Add a RAG pipeline using OpenAI Embeddings and a vector database (e.g. Pinecone or Weaviate)
+- Evaluate LangChain for orchestration of embedding + retrieval + generation
+- Add end-to-end validation and auto-fix workflows for generated artifacts
+- Improve template customization for client controls and Aurena-specific patterns
+- Add richer field metadata parsing from MCP Inspector inputs
+- Add logging / debugging support for generated output and AI guidance
+- Explore SingleStore and other datastore options for vector search
+
+---
+
 ## Summary
 
 Instead of only prompting AI, this approach:
